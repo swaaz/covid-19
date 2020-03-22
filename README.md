@@ -1,2 +1,5 @@
 # covid-19
-WebPage which updated the stats
+Web Page which updated the stats of Corona Virus outbreak
+## Contributors 
+- [Swasthik Shetty](https://github.com/swaaz)
+- [Nimarl](https://github.com/redfedted)
