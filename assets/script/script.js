@@ -3,7 +3,7 @@ $.getJSON("https://coronavirus-19-api.herokuapp.com/countries/india",function(da
     
     var cases=data.cases;
     var active=data.active;
-    var critical=data.critcal;
+    var critical=data.critical;
     var deaths=data.deaths;
     var recovered=data.recovered;
     var todaycases=data.todayCases;
