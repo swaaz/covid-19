@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>covid-19</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Segoe%20UI%20Bold.css">
+    <link rel="stylesheet" href="assets/css/Segoe%20UI%20Bold%20Italic.css">
+    <link rel="stylesheet" href="assets/css/Segoe%20UI%20Italic.css">
+    <link rel="stylesheet" href="assets/css/Segoe%20UI%20Regular.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src="assets/script/script.js"></script>
+    
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-6" style="margin-top: 0px;height: 249px;">
+                    <div>
+                        <p style="margin-top: 15px;font-weight: bold;font-size: 17px;font-family: 'Segoe UI Bold';letter-spacing: 1px;">COVID-19</p>
+                        <p style="padding-top: 0px;margin-top: 70px;font-size: 20px;font-family: 'Segoe UI Regular';color: #F80000;">Country</p>
+                        <h1 style="font-weight: 700;font-size: 44px;font-family: 'Segoe UI Bold';padding-left: 4px;">India</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center" style="padding-top: 0px;padding-left: 25px;">
+                    <div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-bottom: 10px;padding-top: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Cases</p>
+                            </div>
+                            <div class="col"><p class="cases" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-bottom: 10px;padding-top: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Active</p>
+                            </div>
+                            <div class="col"><p class="active" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-top: 10px;padding-bottom: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Critical</p>
+                            </div>
+                            <div class="col"><p class="critical" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-top: 10px;padding-bottom: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Deaths</p>
+                            </div>
+                            <div class="col"><p class="deaths" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-top: 10px;padding-bottom: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Recovered</p>
+                            </div>
+                            <div class="col"><p class="recovered" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-top: 10px;padding-bottom: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Today Cases</p>
+                            </div>
+                            <div class="col" style="font-weight: bold;"><p class="todaycases" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left" style="padding-top: 10px;padding-bottom: 10px;font-family: 'Segoe UI Regular';font-size: 20px;margin-top: 5px;color: #F80000;font-weight: bold;">Today Deaths</p>
+                            </div>
+                            <div class="col"><p class="todaydeaths" style="padding-top: 5px;padding-bottom: 5px;font-weight: bold;font-family: 'Segoe UI Bold';font-size: 30px; text-align: center!important"></p></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <form>
+                <input type="text" id="srch" ></input>
+                <button onchange="search();" type="submit" id="btn">presss</button>
+               </form> 
+               <p id="output"></p>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
