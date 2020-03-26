@@ -5,6 +5,7 @@ function hello() {
     `https://coronavirus-19-api.herokuapp.com/countries/${country}`,
     function(data) {
       console.log(data);
+      $(".output").append(country);
 
       var cases = data.cases;
       var active = data.active;
@@ -13,7 +14,17 @@ function hello() {
       var recovered = data.recovered;
       var todaycases = data.todayCases;
       var todadeaths = data.todayDeaths;
+      
+      $(".cases").empty();
+      $(".active").empty();
+      $(".critical").empty();
+      $(".deaths").empty();
+      $(".recovered").empty();
+      $(".todaycases").empty();
+      $(".todaydeaths").empty();
+      $(".country").empty();
 
+      $(".country").append(data.country);
       $(".cases").append(cases);
       $(".active").append(active);
       $(".critical").append(critical);
@@ -21,6 +32,7 @@ function hello() {
       $(".recovered").append(recovered);
       $(".todaycases").append(todaycases);
       $(".todaydeaths").append(todadeaths);
+      
     }
   );
 }
