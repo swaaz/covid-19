@@ -1,58 +1,58 @@
 $.getJSON(`https://coronavirus-19-api.herokuapp.com/all`, function(data) {
-    console.log(data);
-    $(".tcases").append(data.cases);
-    $(".tdeaths").append(data.deaths);
-    $(".trecovered").append(data.recovered);
+  console.log(data);
+  $(".tcases").append(data.cases);
+  $(".tdeaths").append(data.deaths);
+  $(".trecovered").append(data.recovered);
 });
 
 $.getJSON(`https://coronavirus-19-api.herokuapp.com/countries/india`, function(
-    data
+  data
 ) {
-    console.log(data);
-    $(".icountry").append(data.country);
-    $(".icases").append(data.cases);
-    $(".iactive").append(data.active);
-    $(".icritical").append(data.critical);
-    $(".ideaths").append(data.deaths);
-    $(".irecovered").append(data.recovered);
-    $(".itodaycases").append(data.todayCases);
-    $(".itodaydeaths").append(data.todayDeaths);
+  console.log(data);
+  $(".icountry").append(data.country);
+  $(".icases").append(data.cases);
+  $(".iactive").append(data.active);
+  $(".icritical").append(data.critical);
+  $(".ideaths").append(data.deaths);
+  $(".irecovered").append(data.recovered);
+  $(".itodaycases").append(data.todayCases);
+  $(".itodaydeaths").append(data.todayDeaths);
 });
 
 function Country_name() {
-    var country = document.getElementById("search-field").value;
-    console.log(country);
-    $.getJSON(
-        `https://coronavirus-19-api.herokuapp.com/countries/${country}`,
-        function(data) {
-            console.log(data);
-            $(".country").append(country);
+  var country = document.getElementById("search-field").value;
+  console.log(country);
+  $.getJSON(
+    `https://coronavirus-19-api.herokuapp.com/countries/${country}`,
+    function(data) {
+      console.log(data);
+      $(".country").append(country);
 
-            $(".cases").empty();
-            $(".active").empty();
-            $(".critical").empty();
-            $(".deaths").empty();
-            $(".recovered").empty();
-            $(".todaycases").empty();
-            $(".todaydeaths").empty();
-            $(".country").empty();
+      $(".cases").empty();
+      $(".active").empty();
+      $(".critical").empty();
+      $(".deaths").empty();
+      $(".recovered").empty();
+      $(".todaycases").empty();
+      $(".todaydeaths").empty();
+      $(".country").empty();
 
-            $(".country").append(data.country);
-            $(".cases").append(data.cases);
-            $(".active").append(data.active);
-            $(".critical").append(data.critical);
-            $(".deaths").append(data.deaths);
-            $(".recovered").append(data.recovered);
-            $(".todaycases").append(data.todayCases);
-            $(".todaydeaths").append(data.todayDeaths);
-        }
-    );
+      $(".country").append(data.country);
+      $(".cases").append(data.cases);
+      $(".active").append(data.active);
+      $(".critical").append(data.critical);
+      $(".deaths").append(data.deaths);
+      $(".recovered").append(data.recovered);
+      $(".todaycases").append(data.todayCases);
+      $(".todaydeaths").append(data.todayDeaths);
+    }
+  );
 }
 
 function get_Country() {
-    if (event.key === "Enter") {
-        var country = document.getElementById("search-field").value;
-        //window.open(`./india.html?search=${country}`);
-        location.href =(`./country.html?search=${country}`);
-    }
+  if (event.key === "Enter") {
+    var country = document.getElementById("search-field").value;
+    //window.open(`./india.html?search=${country}`);
+    window.location.href = `./country.html?search=${country}`;
+  }
 }
