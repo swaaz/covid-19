@@ -1,15 +1,95 @@
 /*---API---*/
+/*
+class State{
+  constructor(name,case,recovered,dead)
+  {
+    this.name=name;
+    this.case=case;
+    this.recovered=recovered;
+    this.dead=dead;
+  }
+  fname()
+  {
+    return(this.name);
+  }
+  fcase()
+  {
+    return(this.case);
+  }
+  frecovered()
+  {
+    return(this.recovered);
+  }
+  fdead()
+  {
+    return(this.dead);
+  }
+}
 
+var States=[];
 const url='https://api.rootnet.in/covid19-in/stats/latest';
 
 fetch(url)
-//.then((resp) => resp.json())
+.then((resp) => resp.json())
 .then(function(data)
 {
    console.log(data.data.summary);
+   for(var x=0;x<=26;x++)
+   {
+       States[x]=new State(data.data.regional[x].loc, data.data.regional[x].confirmedCasesIndian, data.data.regional[x].discharged, data.data.regional[x].deaths);
+   }
+
 });
+*/
 
 
+const name=[];
+const cases=[];
+const recov=[];
+const deaths=[];
+   function display()
+ {
+  for(var i=0;i<=26;i++)
+{
+    // name[i]=i;
+    document.write(name[i]);
+    document.write("<br>");
+    document.write(cases[i]);
+    document.write("<br>");
+    document.write(recov[i]);
+    document.write("<br>");
+    document.write(deaths[i]);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+}
+}
+ function read(a,b,c,d,e)
+ {
+     name[a]=b;
+     cases[a]=c;
+     recov[a]=d;
+     deaths[a]=e;
+ }
+
+  const url='https://api.rootnet.in/covid19-in/stats/latest';
+  
+  fetch(url)
+  .then((resp) => resp.json())
+  .then(function(data)
+  {
+     //document.write(data.data.regional[1].loc);
+     for(var x=0;x<=26;x++)
+     {
+         read(x,data.data.regional[x].loc, data.data.regional[x].confirmedCasesIndian, recov[x]=data.data.regional[x].discharged, deaths[x]=data.data.regional[x].deaths);
+     }
+     
+
+
+  
+  
+  });
+ display();
 
 /*---Map---*/
 mapboxgl.accessToken = 'pk.eyJ1IjoicmVkZmVkdGVkIiwiYSI6ImNrOGJ3d3k0bzBkZXczZG8xNWk3a3o4YXoifQ.WEVHaf3zd8D6r8p0K6Oxxg';
