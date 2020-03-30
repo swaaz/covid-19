@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8' />
-    <title></title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-    <style src="./style.css" ></style>
-    <script type="text/javascript" src="/script.js"></script>
-    
-</head>
-<body>
+/*---API---*/
 
-<div id='map'></div>
+cont url='https://api.rootnet.in/covid19-in/stats/latest';
 
-<script>
+fetch(url)
+//.then((resp) => resp.json())
+.then(function(data)
+{
+   document.write(data.data.summary);
+});
 
+
+/*---Map---
 mapboxgl.accessToken = 'pk.eyJ1IjoicmVkZmVkdGVkIiwiYSI6ImNrOGJ3d3k0bzBkZXczZG8xNWk3a3o4YXoifQ.WEVHaf3zd8D6r8p0K6Oxxg';
 
 var map = new mapboxgl.Map({
@@ -377,7 +371,4 @@ geojson.features.forEach(function(marker) {
     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + marker.properties.number + '</p>'))
     .addTo(map);
 });
-</script>
-
-</body>
-</html>
+*/
