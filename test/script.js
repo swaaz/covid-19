@@ -1,13 +1,14 @@
 /*---API---*/
 
-cont url='https://api.rootnet.in/covid19-in/stats/latest';
+const url='https://api.rootnet.in/covid19-in/stats/latest';
 
 fetch(url)
 //.then((resp) => resp.json())
 .then(function(data)
 {
-   document.write(data.data.summary);
+   console.log(data.data.summary.deaths);
 });
+
 
 
 /*---Map---
