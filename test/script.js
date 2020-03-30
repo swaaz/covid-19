@@ -6,12 +6,12 @@ fetch(url)
 //.then((resp) => resp.json())
 .then(function(data)
 {
-   console.log(data.data.summary.deaths);
+   console.log(data.data.summary);
 });
 
 
 
-/*---Map---
+/*---Map---*/
 mapboxgl.accessToken = 'pk.eyJ1IjoicmVkZmVkdGVkIiwiYSI6ImNrOGJ3d3k0bzBkZXczZG8xNWk3a3o4YXoifQ.WEVHaf3zd8D6r8p0K6Oxxg';
 
 var map = new mapboxgl.Map({
@@ -372,4 +372,3 @@ geojson.features.forEach(function(marker) {
     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + marker.properties.number + '</p>'))
     .addTo(map);
 });
-*/
