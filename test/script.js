@@ -1,5 +1,8 @@
 /*---API---*/
-/*
+
+/* 
+------Code-1 ------
+
 const States=[];
 class State{
   constructor(name,cases,recovered,dead)
@@ -49,13 +52,11 @@ for(var i=0;i<1;i++)
     document.write("<br>");
 }
 
-
-
-
-
 */
 
 /*
+------c0de-2 ------
+
 const name=[];
 const cases=[];
 const recov=[];
