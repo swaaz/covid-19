@@ -1,10 +1,11 @@
 /*---API---*/
 /*
+const States=[];
 class State{
-  constructor(name,case,recovered,dead)
+  constructor(name,cases,recovered,dead)
   {
     this.name=name;
-    this.case=case;
+    this.cases=cases;
     this.recovered=recovered;
     this.dead=dead;
   }
@@ -14,7 +15,7 @@ class State{
   }
   fcase()
   {
-    return(this.case);
+    return(this.cases);
   }
   frecovered()
   {
@@ -26,7 +27,6 @@ class State{
   }
 }
 
-var States=[];
 const url='https://api.rootnet.in/covid19-in/stats/latest';
 
 fetch(url)
@@ -36,13 +36,26 @@ fetch(url)
    console.log(data.data.summary);
    for(var x=0;x<=26;x++)
    {
-       States[x]=new State(data.data.regional[x].loc, data.data.regional[x].confirmedCasesIndian, data.data.regional[x].discharged, data.data.regional[x].deaths);
+     
+       States[x]=new State("data.data.regional[x].loc", data.data.regional[x].confirmedCasesIndian, data.data.regional[x].discharged, data.data.regional[x].deaths);
    }
 
-});
+for(var i=0;i<1;i++)
+{
+    document.write(States[i].fname());
+    document.write(States[i].fcase());
+    document.write(States[i].frecovered());
+    document.write(States[i].fdead());
+    document.write("<br>");
+}
+
+
+
+
+
 */
 
-
+/*
 const name=[];
 const cases=[];
 const recov=[];
@@ -90,6 +103,22 @@ const deaths=[];
   
   });
  display();
+ */
+
+const url='https://api.rootnet.in/covid19-in/stats/latest';
+  
+fetch(url)
+.then((resp) => resp.json())
+.then(function(data)
+{
+   console.log(data.data.summary);
+   
+
+
+
+
+});
+ 
 
 /*---Map---*/
 mapboxgl.accessToken = 'pk.eyJ1IjoicmVkZmVkdGVkIiwiYSI6ImNrOGJ3d3k0bzBkZXczZG8xNWk3a3o4YXoifQ.WEVHaf3zd8D6r8p0K6Oxxg';
