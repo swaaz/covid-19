@@ -5,6 +5,15 @@ $.getJSON(`https://coronavirus-19-api.herokuapp.com/all`, function(data) {
   $(".trecovered").append(data.recovered);
 });
 
+const url = "https://api.rootnet.in/covid19-in/stats/latest";
+
+fetch(url)
+  .then(resp => resp.json())
+  .then(function(data) {
+    console.log(data);
+    console.log(data.data.summary);
+  });
+
 $.getJSON(`https://coronavirus-19-api.herokuapp.com/countries/india`, function(
   data
 ) {
