@@ -1,6 +1,7 @@
 body {
-    margin: 10px;
+    margin: 5px;
     padding: 0;
+    overflow-x: hidden;
   }
 
   #map {
@@ -35,19 +36,27 @@ body {
 
 
 header{
-  margin: 5px;
+  margin: 2px;
   width: 100%;
   height: 10%;
 }
 header .container #logo{
-  width: 40%;
+  width: 15%;//
   margin-left: 2%;
-  float: left;
+  
 
 }
+#vector{
+  width: 48%;//
+  height: 30%;
+}
+#front-side #vector{
+  margin: 300px 100px 0 20px;//
+  
+}
 #front-side .container{
-  background-color: #ff0000;
-  height: 300px;
+  background-color: #ff0000; 
+  height: 3000px;
   width: 100%;
   display: flex;
 }
