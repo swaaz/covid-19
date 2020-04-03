@@ -55,13 +55,29 @@ header .container #logo{
   
 }
 #front-side .container{
-  background-color: #ff0000; 
+  background-color: white; 
   height: 3000px;
   width: 100%;
   display: flex;
 }
-#front-side .container .semi-circle{
+#boxes{
+  margin-left: 30%;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 5%;
+  column-rule-style: solid ;
+  column-rule-color: #ff0000;
+  column-count:4 ;
+  column-gap: 5px;
+  display: inline;
+  float: left;
+}
+#boxes .box{
   background-color: white;
+}
+#front-side .container .semi-circle{
+  background-color: #ff0000;
  
   width: 100%;
   height: 80%;
