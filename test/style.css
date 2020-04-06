@@ -46,17 +46,20 @@ header .container #logo{
   
 
 }
-#vector{
-  width: 48%;//
-  height: 30%;
+#front-side{
+  background-image: url(./Homepage-01.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+
 }
 #front-side #vector{
-  margin: 300px 100px 0 20px;//
+ 
   
 }
 #front-side .container{
-  background-color: white; 
-  height: 3000px;
+  height: 1000%;
   width: 100%;
   display: flex;
 }
@@ -77,24 +80,20 @@ header .container #logo{
   background-color: white;
 }
 #front-side .container .semi-circle{
-  background-color: #ff0000;
- 
-  width: 100%;
-  height: 80%;
-  border-radius: 0 0 1500px 1500px;
+  
 }
 
 /*webview*/
 
 @media screen and (min-width: 1400px){
  
-
-  #front-side .container .semi-circle{
-    background-color: white;
-   
+  #front-side{
+    background-image: url(./Homepage-01.png);
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    height: 50%;
-    border-radius: 0 0 1200px 1200px;
+    height: 1000px;
+  
   }
   header{
     margin: 10px;
