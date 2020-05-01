@@ -6,54 +6,45 @@
   <title>Map</title>
   <meta name="viewport" content="width=display-width" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <!--script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script-->
   <!--link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" /-->
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
 </head>
 
 <body>
   <!--div id="map"></div--->
-</body>
-<!---script type="text/javascript" src="./script.js"></script-->
-<header id="head" >
-  <div class="container">
-   <a class="link" href="index.html">
-    <img src="./logo.png" id="logo"/>
-   </a> 
-  </div>
-</header>
 
-<section id="front-side">
-  <div class="container">
-    <div id="boxes">
-      <div class="box">
-        <p class="tag-title">Cases Reported</p>
-        <p class="reported tag-digit">45455</p>
-      </div>
-      <div class="box">
-        <p class="tag-title">Cases Reported</p>
-        <p class="active tag-digit">45455</p>
-      </div>
-      <div class="box">
-        <p class="tag-title">Cases Reported</p>
-        <p class="recovered tag-digit">45455</p>
-      </div>
-      <div class="box">
-        <p class="tag-title">Cases Reported</p>
-        <p class="deaths tag-digit">45455</p>
-      </div>
-    </div>
-  </div>
+  <!---script type="text/javascript" src="./script.js"></script-->
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
   
-</section>
-<footer>
-  <div class="foot">
-    <p>
-      Built for you, by
-      <a href="https://github.com/swaaz">swaaz</a>
-      &amp;
-      <a href="https://github.com/redfedted">nirmal</a>
-    </p>
-  </div>
-</footer>
+  <a class="navbar-brand" href="#">
+    <img src="./logo.png" alt="logo" style="width: 250px; height: 500px;" />
+  </a>
+  <ul class="navbar-nav m1-auto" style="align-items: flex-end;">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Countries</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About COVID</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Prevention</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Bed Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Helpline</a>
+    </li>
+  </ul>
+</nav>
+</body>
+
 </html>
